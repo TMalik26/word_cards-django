@@ -1,0 +1,237 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="row">
+        <!-- Форма фильтров -->
+        <div class="dropdown mb-2">
+            <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Фильтри
+            </button>
+
+            <form action="" method="get" class="dropdown-menu bg-dark" data-bs-theme="dark">
+                <!-- чекбокс кнопки ПО КАТЕГОРИМ ТЕМ и ПО ПРОГРЕССУ-->
+                <p class="text-white mx-3 mt-3">Категорії слів:</p>
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
+                    <input type="hidden" name="q" value="request.GET.q">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Бізнес
+                    </label>
+                </div>
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
+                    <input type="hidden" name="q" value="request.GET.q">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        ІТ
+                    </label>
+                </div>
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
+                    <input type="hidden" name="q" value="request.GET.q">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Навчання
+                    </label>
+                </div>
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
+                    <input type="hidden" name="q" value="request.GET.q">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Подорожі
+                    </label>
+                </div>
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
+                    <input type="hidden" name="q" value="request.GET.q">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Побут
+                    </label>
+                </div>
+                <p class="text-white mx-3 mt-3">Прогрес навання:</p>
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
+                    <input type="hidden" name="q" value="request.GET.q">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Нові теми
+                    </label>
+                </div>
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
+                    <input type="hidden" name="q" value="request.GET.q">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Пройдені / розпочаті
+                    </label>
+                </div>
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
+                    <input type="hidden" name="q" value="request.GET.q">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Робота над помилками
+                    </label>
+                </div>
+                <!-- радиобатон СОРТИРОВКИ -->
+                <p class="text-white mx-3 mt-3">Сортувати за:</p>
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="radio" name="order_by" id="flexRadioDefault3" value="-price">
+                    <label class="form-check-label" for="flexRadioDefault3">
+                        Прогресом
+                    </label>
+                </div>
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="radio" name="order_by" id="flexRadioDefault3" value="-price" checked>
+                    <label class="form-check-label" for="flexRadioDefault3">
+                        Замовчуванням
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary mx-3 mt-3">Применить</button>
+            </form>
+        </div>
+        <!-- СПИСОК ТЕМ -->
+        <div class="mt-5 pt-5">
+            <!-- Заголовок -->
+            <h1 class="mb-4 fw-bold text-center">
+                Теми для вивчення
+            </h1>
+            <!-- Описание -->
+            <p class="lead text-center mb-5">
+                Оберіть тему для навчання. Ви можете почати нову тему, продовжити роботу над помилками
+                або повторити вже пройдену тему.
+            </p>
+            <!-- СПИСОК ТЕМ СПИСОК ТЕМ СПИСОК ТЕМ СПИСОК ТЕМ СПИСОК ТЕМ СПИСОК ТЕМ СПИСОК ТЕМ -->
+            
+            {% for topic in topics %}
+            <div class="list-group">
+                <!-- Одна тема с прогрессом 100 -->
+
+                {% comment %} {% if topic.progress|add:0 == 100 %} {% endcomment %}
+
+                <div class="list-group-item mb-3 shadow-sm rounded">
+                    <div class="row align-items-center">
+
+                        <!-- Название темы -->
+                        <div class="col-md-4">
+                            <h5 class="mb-1 fw-bold">{{ topic.name }}</h5>
+                            <small class="text-muted">Кількість слів: {{ topic.words_count }}</small>
+                        </div>
+
+                        <!-- Прогресс -->
+                        <div class="col-md-4">
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-success"
+                                    role="progressbar"
+                                    style="width: 100%;">
+                                    100%
+                                </div>
+                            </div>                        
+                        </div>
+
+
+                        <!-- Кнопки действия -->                          
+                        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        
+                            <div class="d-flex justify-content-end align-items-center gap-2">
+                                <a href="#" class="btn btn-outline-success" 
+                                    style="width: 180px; height: 60px; 
+                                    display: flex; justify-content: center; align-items: center;">
+                                    Повторити тему
+                                </a>
+                                <a href={% url 'catalog:topic' topic.slug %} class="btn btn-outline-secondary" 
+                                    style="width: 180px; height: 60px; 
+                                    display: flex; justify-content: center; align-items: center;">
+                                    Продивитись список слів
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>    
+
+                <!-- Тема с прогрессом 0 -->
+                {% comment %} {% elif topic.progress == 0 %}
+                <div class="list-group-item mb-3 shadow-sm rounded">
+                    <div class="row align-items-center">
+
+                        <!-- Название темы -->
+                        <div class="col-md-4">
+                            <h5 class="mb-1 fw-bold">{{ topic.name }}</h5>
+                            <small class="text-muted">Кількість слів: {{ topic.words_count }}</small>
+                        </div>
+
+                        <!-- Прогресс -->
+                        <div class="col-md-4">
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-secondary"
+                                    role="progressbar"
+                                    style="width: 0%;">
+                                    0%
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Кнопки действия --> 
+                        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                            <div class="d-flex justify-content-end align-items-center gap-2">
+
+                                <a href="#" class="btn btn-outline-primary" 
+                                    style="width: 180px; height: 60px; 
+                                    display: flex; justify-content: center; align-items: center;">
+                                    Почати тему
+                                </a>
+                                <a href={% url 'catalog:topic' %} class="btn btn-outline-secondary" 
+                                    style="width: 180px; height: 60px; 
+                                    display: flex; justify-content: center; align-items: center;">
+                                    Продивитись список слів
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>  
+
+                <!-- Тема с прогрессом 1–99 -->
+                {% else %}
+                <div class="list-group-item mb-3 shadow-sm rounded">
+                    <div class="row align-items-center">
+
+                        <!-- Название темы -->
+                        <div class="col-md-4">
+                            <h5 class="mb-1 fw-bold">{{ topic.name }}</h5>
+                            <small class="text-muted">Кількість слів: {{ topic.words_count }}</small>
+                        </div>
+
+                        <!-- Прогресс -->
+                        <div class="col-md-4">
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-warning"
+                                    role="progressbar"
+                                    style="width: {{ topic.progress }}%;">
+                                    {{ topic.progress }}%
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Кнопки действия -->
+                        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                            <div class="d-flex justify-content-end align-items-center gap-2">
+                                <a href="#" class="btn btn-outline-warning" 
+                                    style="width: 180px; height: 60px; 
+                                    display: flex; justify-content: center; align-items: center;">
+                                    Працювати над помилками
+                                </a>
+                                <a href={% url 'catalog:topic' %} class="btn btn-outline-secondary" 
+                                    style="width: 180px; height: 60px; 
+                                    display: flex; justify-content: center; align-items: center;">
+                                    Продивитись список слів
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                {% endif %} {% endcomment %}
+            </div>
+            {% endfor %} 
+        </div>
+    </div>
+{% endblock %}

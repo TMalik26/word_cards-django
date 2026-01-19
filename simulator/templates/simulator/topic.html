@@ -1,0 +1,54 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-4">
+
+    <!-- Кнопка действия назад -->
+    <div class="d-flex justify-content-start mb-5">
+        <a href={% url "catalog:index" %} class="btn btn-outline-secondary" 
+        style="width: 180px; height: 60px; display: flex; justify-content: center; align-items: center;">
+            Повернутись до вибору теми
+        </a>
+    </div>
+    
+    <!-- Заголовок -->
+    <h1 class="mb-3 fw-bold text-center">
+        Business English
+    </h1>
+
+    <!-- Подзаголовок -->
+    <p class="text-center text-muted mb-4">
+        Перегляд слів у темі
+    </p>
+
+    <!-- Таблица слов -->
+    <div class="table-responsive mb-5">
+        <table class="table table-striped align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>English</th>
+                    <th>Українська</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for word in words %}
+                <tr>
+                    <td>{{ word.word_eng }}</td>
+                    <td>{{ word.word_ukr}}</td>
+                </tr>
+                {% endfor %} 
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Кнопка действия начать -->
+    <div class="d-flex justify-content-center mb-5">
+        <a href="#" class="btn btn-outline-warning" 
+        style="width: 180px; height: 60px; display: flex; justify-content: center; align-items: center;">
+            Почати тему
+        </a>
+    </div>
+
+</div>
+{% endblock %}
