@@ -17,7 +17,7 @@ def topic(request, topic_slug):
     topic = get_object_or_404(Topic, slug=topic_slug)
     words = Word.objects.filter(topic=topic)
     context = {
-        'title': 'Практика',
+        'title': 'Перегляд слів',
         'words': words
     }
     return render(request, 'simulator/topic.html', context=context)

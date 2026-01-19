@@ -41,13 +41,13 @@
                             <a class="nav-link  text-white" href={% url 'catalog:index' %}>Практика</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  text-white" href="users/login.html">Профіль</a>
+                            <a class="nav-link  text-white" href={% url 'user:profile' %}>Профіль</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  text-white" href="users/login.html">Увійти</a>
+                            <a class="nav-link  text-white" href={% url 'user:login' %}>Увійти</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  text-white" href="users/login.html">Вийти</a>
+                            <a class="nav-link  text-white" href={% url 'user:logout' %}>Вийти</a>
                         </li>
                     </ul>
                 </div>
