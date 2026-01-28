@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     "main",
     "simulator",
-    "user",
+    "users",
 ]
 
 MIDDLEWARE = [
@@ -131,3 +131,9 @@ STATICFILES_DIRS = [ BASE_DIR / 'static']
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'users.User'
+
+# LOGIN_URL = '/user/login/'
+
+# LOGIN_REDIRECT_URL = '/'

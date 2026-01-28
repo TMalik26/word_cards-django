@@ -9,34 +9,39 @@
                 <div class="col-md-5">
                     <div class=" bg-white p-4 mb-4 mx-2 rounded custom-shadow">
                         <h3 class="text-center mb-4">Акаунт користувача</h3>
-                        <form>
+                        <form method="post" action='{% url "users:profile" %}' enctype="multipart/form-data">
+                            {% csrf_token %}
                             <div class="row">
                                 <div class="col-md-12 mb-3 text-center">
-                                    <img src={% static "deps/images/baseavatar.jpg" %}
-                                        alt="Аватар пользователя" class="img-fluid rounded-circle"
-                                        style="max-width: 150px;">
-                                    <input type="file" class="form-control mt-3" id="avatar"
-                                        accept="image/*">
+                                    {% if user.image %}
+                                        <img src="{{ user.image.url }}"
+                                            alt="Аватар користувача" class="img-fluid rounded-circle"
+                                            style="max-width: 150px;">
+                                    {% else %}
+                                        <img src="{% static "deps/images/baseavatar.jpg" %}"
+                                            alt="Аватар пользователя" class="img-fluid rounded-circle"
+                                            style="max-width: 150px;">
+                                    {% endif %}
                                 </div>
                                 <div class="col-md-12 mb-3">
                                     <label for="firstName" class="form-label">Ім'я*</label>
                                     <input type="text" class="form-control" id="firstName"
-                                        placeholder="Введите ваше имя" value="" required>
+                                        name="first_name" placeholder="Введите ваше имя" value="{{user.first_name}}" required>
                                 </div>
                                 <div class="col-md-12 mb-3">
                                     <label for="lastName" class="form-label">Прізвище*</label>
                                     <input type="text" class="form-control" id="lastName"
-                                        placeholder="Введите вашу фамилию" value="" required>
+                                        name="last_name" placeholder="Введите вашу фамилию" value="{{user.last_name}}" required>
                                 </div>
                                 <div class="col-md-12 mb-3">
                                     <label for="username" class="form-label">Ім'я користувача*</label>
                                     <input type="text" class="form-control" id="username"
-                                        placeholder="Введите ваше имя пользователя" value="" required>
+                                        name="username" placeholder="Введите ваше имя пользователя" value="{{user.username}}" required>
                                 </div>
                                 <div class="col-md-12 mb-3">
                                     <label for="email" class="form-label">Email*</label>
                                     <input type="email" class="form-control" id="email"
-                                        placeholder="Введите ваш email *youremail@example.com" value=""
+                                        name="email" placeholder="Введите ваш email *youremail@example.com" value="{{user.email}}"
                                         required>
                                 </div>
                             </div>
