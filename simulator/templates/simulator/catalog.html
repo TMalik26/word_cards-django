@@ -7,64 +7,40 @@
         <div class="dropdown mb-2">
             <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
-                Фильтри
+                Фільтри
             </button>
 
-            <form action="" method="get" class="dropdown-menu bg-dark" data-bs-theme="dark">
+            <form action="{% url "catalog:index" %}" method="get" class="dropdown-menu bg-dark" data-bs-theme="dark">
                 <!-- чекбокс кнопки ПО КАТЕГОРИМ ТЕМ и ПО ПРОГРЕССУ-->
                 <p class="text-white mx-3 mt-3">Категорії слів:</p>
+
+                {% for category in categories %}
                 <div class="form-check text-white mx-3">
-                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
+                    <input class="form-check-input" type="checkbox" name="category" id="flexCheckDefault" value="on">
                     <input type="hidden" name="q" value="request.GET.q">
                     <label class="form-check-label" for="flexCheckDefault">
-                        Бізнес
+                        {{ category.name }}
                     </label>
                 </div>
-                <div class="form-check text-white mx-3">
-                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
-                    <input type="hidden" name="q" value="request.GET.q">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        ІТ
-                    </label>
-                </div>
-                <div class="form-check text-white mx-3">
-                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
-                    <input type="hidden" name="q" value="request.GET.q">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Навчання
-                    </label>
-                </div>
-                <div class="form-check text-white mx-3">
-                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
-                    <input type="hidden" name="q" value="request.GET.q">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Подорожі
-                    </label>
-                </div>
-                <div class="form-check text-white mx-3">
-                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
-                    <input type="hidden" name="q" value="request.GET.q">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Побут
-                    </label>
-                </div>
+                {% endfor %}
+
                 <p class="text-white mx-3 mt-3">Прогрес навання:</p>
                 <div class="form-check text-white mx-3">
-                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
+                    <input class="form-check-input" type="checkbox" name="new" id="flexCheckDefault" value="on">
                     <input type="hidden" name="q" value="request.GET.q">
                     <label class="form-check-label" for="flexCheckDefault">
                         Нові теми
                     </label>
                 </div>
                 <div class="form-check text-white mx-3">
-                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
+                    <input class="form-check-input" type="checkbox" name="done" id="flexCheckDefault" value="on">
                     <input type="hidden" name="q" value="request.GET.q">
                     <label class="form-check-label" for="flexCheckDefault">
                         Пройдені / розпочаті
                     </label>
                 </div>
                 <div class="form-check text-white mx-3">
-                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
+                    <input class="form-check-input" type="checkbox" name="failed" id="flexCheckDefault" value="on">
                     <input type="hidden" name="q" value="request.GET.q">
                     <label class="form-check-label" for="flexCheckDefault">
                         Робота над помилками

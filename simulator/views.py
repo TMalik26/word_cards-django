@@ -1,13 +1,15 @@
 from django.db.models import Count
 from django.shortcuts import get_object_or_404, render
 
-from simulator.models import Topic, Word
+from simulator.models import Category, Topic, Word
 
 def catalog(request):
+    categories = Category.objects.all()
     topics = Topic.objects.annotate(words_count=Count('words'))
     context = {
         'title': 'Практика',
-        'topics': topics
+        'topics': topics,
+        'categories': categories,
     }
     return render(request, 'simulator/catalog.html', context=context)
 
