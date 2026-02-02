@@ -4,7 +4,7 @@
 {% block content %}
 <div class="container mt-5 pt-4">
 
-    <!-- Кнопка действия назад -->
+    <!-- Кнопка повернутися назад -->
     <div class="d-flex justify-content-start mb-5">
         <a href={% url "catalog:index" %} class="btn btn-outline-secondary" 
         style="width: 180px; height: 60px; display: flex; justify-content: center; align-items: center;">
@@ -17,12 +17,12 @@
         Business English
     </h1>
 
-    <!-- Подзаголовок -->
+    <!-- Підзаголовок -->
     <p class="text-center text-muted mb-4">
         Перегляд слів у темі
     </p>
 
-    <!-- Таблица слов -->
+    <!-- Таблиця слів -->
     <div class="table-responsive mb-5">
         <table class="table table-striped align-middle">
             <thead class="table-dark">
@@ -42,13 +42,23 @@
         </table>
     </div>
 
-    <!-- Кнопка действия начать -->
+        <!-- Кнопка почати -->
+    <div class="d-flex justify-content-center mb-5">
+        <a href="{% url 'game:direction' topic.slug %}"
+            class="btn btn-outline-warning"
+            style="width: 200px; height: 60px; display: flex; justify-content: center; align-items: center;">
+            Почати
+        </a>
+    </div>
+
+
+    {% comment %} <!-- Кнопка почати -->
     <div class="d-flex justify-content-center mb-5">
         <a href="#" class="btn btn-outline-warning" 
         style="width: 180px; height: 60px; display: flex; justify-content: center; align-items: center;">
             Почати тему
         </a>
-    </div>
+    </div> {% endcomment %}
 
 </div>
 {% endblock %}

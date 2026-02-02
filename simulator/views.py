@@ -20,7 +20,8 @@ def topic(request, topic_slug):
     words = Word.objects.filter(topic=topic)
     context = {
         'title': 'Перегляд слів',
-        'words': words
+        'words': words,
+        'topic': topic,
     }
     return render(request, 'simulator/topic.html', context=context)
 

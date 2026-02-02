@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-4">
+
+    <!-- Кнопка назад -->
+    <div class="d-flex justify-content-start mb-5">
+        <a href="{% url 'catalog:index' %}"
+           class="btn btn-outline-secondary"
+           style="width: 180px; height: 60px; display: flex; justify-content: center; align-items: center;">
+            Повернутись до вибору теми
+        </a>
+    </div>
+
+    <!-- Заголовок -->
+    <h1 class="mb-3 fw-bold text-center">
+        {{ topic.name }}
+    </h1>
+
+    <p class="text-center text-muted mb-4">
+        Оберіть напрям перекладу для практики
+    </p>
+
+    <!-- Форма вибору направлення й старту гри -->
+    <form method="post" action="{% url "game:direction" topic.slug %}">
+        {% csrf_token %}
+        <!-- Вибір направлення перекладу -->
+        <div class="d-flex justify-content-center mb-4">
+            <div class="card p-4" style="max-width: 420px; width: 100%;">
+                <h5 class="text-center mb-3 fw-semibold">
+                    Оберіть напрям перекладу
+                </h5>
+
+                <div class="d-flex flex-column align-items-center mb-2">
+                    <div class="form-check text-center mb-2">
+                        <input class="form-check-input" type="radio" 
+                            name="direction" id="eng_to_ukr" value="eng_ukr" checked>
+                        <label class="form-check-label" for="eng_to_ukr">
+                            З англійської → на українську
+                        </label>
+                    </div>
+
+                    <div class="form-check text-center">
+                        <input class="form-check-input" type="radio" 
+                            name="direction" id="ukr_to_eng" value="ukr_eng">
+                        <label class="form-check-label" for="ukr_to_eng">
+                            З української → на англійську
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Кнопка почати -->
+        <div class="d-flex justify-content-center mb-5">
+            <button type="submit" class="btn btn-outline-warning" 
+                    style="width: 180px; height: 60px; display: flex; justify-content: center; align-items: center;">
+                Почати тему
+            </button>
+        </div>
+    </form>
+
+</div>
+
+{% endblock %}

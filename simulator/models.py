@@ -49,3 +49,6 @@ class Word(models.Model):
     
     def display_word_ukr(self):
         return self.word_ukr
+    
+    def __str__(self): 
+        return f'{self.word_eng} - {self.word_ukr}'
