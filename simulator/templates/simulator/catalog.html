@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load custom_tags %}
 
 {% block content %}
     <div class="row">
@@ -12,13 +13,13 @@
 
             <form action="{% url "catalog:index" %}" method="get" class="dropdown-menu bg-dark" data-bs-theme="dark">
                 <!-- чекбокс кнопки ПО КАТЕГОРИМ ТЕМ и ПО ПРОГРЕССУ-->
-                <p class="text-white mx-3 mt-3">Категорії слів:</p>
+                <p class="text-white mx-3 mt-3">Категорії тем:</p>
 
                 {% for category in categories %}
                 <div class="form-check text-white mx-3">
-                    <input class="form-check-input" type="checkbox" name="category" id="flexCheckDefault" value="on">
-                    <input type="hidden" name="q" value="request.GET.q">
-                    <label class="form-check-label" for="flexCheckDefault">
+                    <input class="form-check-input" type="checkbox" name="category"
+                        id="category-{{ category.id }}" value="{{ category.slug }}">
+                    <label class="form-check-label" for="category-{{ category.id }}">
                         {{ category.name }}
                     </label>
                 </div>
@@ -26,37 +27,39 @@
 
                 <p class="text-white mx-3 mt-3">Прогрес навання:</p>
                 <div class="form-check text-white mx-3">
-                    <input class="form-check-input" type="checkbox" name="new" id="flexCheckDefault" value="on">
-                    <input type="hidden" name="q" value="request.GET.q">
-                    <label class="form-check-label" for="flexCheckDefault">
+                    <input class="form-check-input" type="checkbox" name="progress" id="progress-new" value="new"
+                    {% if 'new' in progress_filters %}checked{% endif %}>
+                    <label class="form-check-label" for="progress-new">
                         Нові теми
                     </label>
                 </div>
                 <div class="form-check text-white mx-3">
-                    <input class="form-check-input" type="checkbox" name="done" id="flexCheckDefault" value="on">
-                    <input type="hidden" name="q" value="request.GET.q">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Пройдені / розпочаті
+                    <input class="form-check-input" type="checkbox" name="progress" id="progress-done" value="done"
+                    {% if 'done' in progress_filters %}checked{% endif %}>
+                    <label class="form-check-label" for="progress-done">
+                        Пройдені на 100% 
                     </label>
                 </div>
                 <div class="form-check text-white mx-3">
-                    <input class="form-check-input" type="checkbox" name="failed" id="flexCheckDefault" value="on">
-                    <input type="hidden" name="q" value="request.GET.q">
-                    <label class="form-check-label" for="flexCheckDefault">
+                    <input class="form-check-input" type="checkbox" name="progress" id="progress-failed" value="failed"
+                    {% if 'failed' in progress_filters %}checked{% endif %}>
+                    <label class="form-check-label" for="progress-failed">
                         Робота над помилками
                     </label>
                 </div>
                 <!-- радиобатон СОРТИРОВКИ -->
                 <p class="text-white mx-3 mt-3">Сортувати за:</p>
                 <div class="form-check text-white mx-3">
-                    <input class="form-check-input" type="radio" name="order_by" id="flexRadioDefault3" value="-price">
-                    <label class="form-check-label" for="flexRadioDefault3">
+                    <input class="form-check-input" type="radio" name="order_by" id="order-progress" value="-progress"
+                    {% if order_by == '-progress' %}checked{% endif %}>
+                    <label class="form-check-label" for="order-progress">
                         Прогресом
                     </label>
                 </div>
                 <div class="form-check text-white mx-3">
-                    <input class="form-check-input" type="radio" name="order_by" id="flexRadioDefault3" value="-price" checked>
-                    <label class="form-check-label" for="flexRadioDefault3">
+                    <input class="form-check-input" type="radio" name="order_by" id="order-default" value=""
+                    {% if not order_by or order_by == '' %}checked{% endif %}>
+                    <label class="form-check-label" for="order-default">
                         Замовчуванням
                     </label>
                 </div>
@@ -77,85 +80,36 @@
             <!-- Самі теми по порядку -->
 
             {% for topic in topics %}
-            <div class="list-group">
-                <!-- Одна тема -->
+            <div class="list-group mb-3">
                 <div class="list-group-item mb-3 shadow-sm rounded">
-                    <div class="row align-items-center">
+                    <div class="row align-items-center justify-content-between">
                         <!-- Назва темы -->
                         <div class="col-md-4">
                             <h5 class="mb-1 fw-bold">{{ topic.name }}</h5>
                             <small class="text-muted">Кількість слів: {{ topic.words_count }}</small>
                         </div>
 
-                        {% comment %} {% if topic.progress|add:0 == 100 %} {% endcomment %}
                         <!-- Прогрес -->
-                        <div class="col-md-4">
-                            <div class="progress" style="height: 20px;">
-                                <div class="progress-bar bg-success"
+                        <div class="col-md d-flex align-items-center">
+                            {% with percent=topic_progress|get_item:topic.id|default:0 %}
+                            <div class="progress w-100" style="height: 20px;">
+                                <div class="progress-bar 
+                                    {% if percent == 100 %}bg-success{% elif percent == 0 %}bg-secondary{% else %}bg-warning{% endif %}"
                                     role="progressbar"
-                                    style="width: 100%;">
-                                    100%
-                                </div>
-                            </div>                        
-                        </div>
-                        <!-- Кнопка гри -->                          
-                        <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                        
-                            <div class="d-flex justify-content-end align-items-center gap-2">
-                                <a href="#" class="btn btn-outline-success" 
-                                    style="width: 180px; height: 60px; 
-                                    display: flex; justify-content: center; align-items: center;">
-                                    Повторити тему
-                                </a>
-
-                        {% comment %} {% elif topic.progress == 0 %}
-                        <!-- Прогрес -->
-                        <div class="col-md-4">
-                            <div class="progress" style="height: 20px;">
-                                <div class="progress-bar bg-secondary"
-                                    role="progressbar"
-                                    style="width: 0%;">
-                                    0%
+                                    style="width: {{ percent }}%;">
+                                    {{ percent }}%
                                 </div>
                             </div>
+                            {% endwith %}
                         </div>
-                        <!-- Кнопка гри --> 
-                        <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                            <div class="d-flex justify-content-end align-items-center gap-2">
-                                <a href="#" class="btn btn-outline-primary" 
-                                    style="width: 180px; height: 60px; 
-                                    display: flex; justify-content: center; align-items: center;">
-                                    Почати тему
-                                </a>
                         
-                        
-                        {% else %}
-                        <!-- Прогрес -->
-                        <div class="col-md-4">
-                            <div class="progress" style="height: 20px;">
-                                <div class="progress-bar bg-warning"
-                                    role="progressbar"
-                                    style="width: {{ topic.progress }}%;">
-                                    {{ topic.progress }}%
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Кнопка гри -->
-                        <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                            <div class="d-flex justify-content-end align-items-center gap-2">
-                                <a href="#" class="btn btn-outline-warning" 
-                                    style="width: 180px; height: 60px; 
-                                    display: flex; justify-content: center; align-items: center;">
-                                    Працювати над помилками
-                                </a>
-                                                                      
-                        {% endif %}       {% endcomment %}
-                                <a href={% url 'catalog:topic' topic.slug %} class="btn btn-outline-secondary" 
-                                    style="width: 180px; height: 60px; 
-                                    display: flex; justify-content: center; align-items: center;">
-                                    Переглянути тему
-                                </a>
-                            </div>
+                        <!-- Переглянути тему -->
+                        <div class="col-auto d-flex">
+                            <a href="{% url 'catalog:topic' topic.slug %}" 
+                                class="btn btn-outline-primary ms-3" 
+                                style="width: 180px; height: 60px; display: flex; justify-content: center; align-items: center;">
+                                Переглянути тему
+                            </a>
                         </div>
                     </div>
                 </div>    

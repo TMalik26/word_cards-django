@@ -49,40 +49,44 @@ def play_game(request, session_id):
 
     if request.method == "POST":
         action = request.POST.get("action")
-        form = AnswerForm(data=request.POST)
+        form = AnswerForm(request.POST)
+        if form.is_valid():
+            if action == "skip":
+                game_answer = GameAnswer(
+                    session=game_session,
+                    word=word_to_answer,
+                    user_answer="",
+                    is_correct=False,
+                )
+                game_answer.save()
 
-        if action == "skip":
-            game_answer = GameAnswer(
-                session=game_session,
-                word=word_to_answer,
-                user_answer="",
-                is_correct=False,
-            )
-            game_answer.save()
-
-        elif action == "answer" and form.is_valid():
-            user_answer = request.POST["user_answer"].strip()
-            is_correct = user_answer.lower() == correct_word.lower()
-            game_answer = GameAnswer(
-                session=game_session,
-                word=word_to_answer,
-                user_answer=user_answer,
-                is_correct=is_correct,
-            )
-            game_answer.save()
-        
-        game_session.current_index += 1
+            elif action == "answer":
+                user_answer = form.cleaned_data["user_answer"].strip()
+                is_correct = (
+                    user_answer.lower() == correct_word.lower()
+                    if user_answer
+                    else False
+                )
+                game_answer = GameAnswer(
+                    session=game_session,
+                    word=word_to_answer,
+                    user_answer=user_answer,
+                    is_correct=is_correct,
+                )
+                game_answer.save()
+            
+            game_session.current_index += 1
 
 
-        if game_session.current_index >= len(words_list):
-            game_session.is_finished = True
-        
-        game_session.save()
-        
-        if game_session.is_finished:
-            return redirect("game:result", session_id=game_session.id)
-        else:
-            return redirect("game:play", session_id=game_session.id)
+            if game_session.current_index >= len(words_list):
+                game_session.is_finished = True
+            
+            game_session.save()
+            
+            if game_session.is_finished:
+                return redirect("game:result", session_id=game_session.id)
+            else:
+                return redirect("game:play", session_id=game_session.id)
 
     else:
         form = AnswerForm()
@@ -97,19 +101,13 @@ def play_game(request, session_id):
 
 def game_result(request, session_id):
     game_session = GameSession.objects.get(id=session_id)
-    topic = game_session.topic
-    answers_qs  = GameAnswer.objects.filter(session=game_session)
-    total_answers = answers_qs.count()
-    correct_answers = answers_qs.filter(is_correct=True).count()
-    if total_answers > 0:
-        user_result = round((correct_answers / total_answers) * 100)
-    else:
-        user_result = 0
+    result_data = game_session.calculate_result()
+
     context = {
         "title": "Результати",
-        "topic": topic,
-        "user_result": user_result,
-        "user_answers": total_answers,
-        "correct_user_answers": correct_answers,
+        "topic": game_session.topic,
+        "user_result": result_data["percent"],
+        "user_answers": result_data["total"],
+        "correct_user_answers": result_data["correct"],
     }
     return render(request, "game/result.html", context=context)

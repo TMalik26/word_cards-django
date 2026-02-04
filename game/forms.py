@@ -18,10 +18,6 @@ class ChooseDirectionForm(forms.ModelForm):
 class AnswerForm(forms.ModelForm):
     class Meta:
         model = GameAnswer
-        fields = ["word", "user_answer"]
+        fields = ["user_answer"]
 
-    word = forms.ModelChoiceField(
-        queryset=None,
-        widget=forms.HiddenInput
-    )
-    user_answer = forms.CharField(max_length=100)
+    user_answer = forms.CharField(max_length=100, required=False)

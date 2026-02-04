@@ -16,6 +16,7 @@ class GameSession(models.Model):
     current_index = models.PositiveIntegerField(default=0)
     is_finished = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
+    result_percent = models.PositiveBigIntegerField(default=0)
 
     class Meta:
         db_table = 'game_session'
@@ -25,6 +26,21 @@ class GameSession(models.Model):
 
     def __str__(self):
         return f'{self.user} - {self.topic}'
+    
+    def calculate_result(self):
+        answers = self.answers.all()
+        total = answers.count()
+        if total == 0:
+            self.result_percent = 0
+        else:
+            correct = answers.filter(is_correct=True).count()
+            self.result_percent = round(correct / total * 100)
+        self.save(update_fields=["result_percent"])
+        return {
+            'total': total,
+            'correct': correct,
+            'percent': self.result_percent,
+        }
     
 
 class GameAnswer(models.Model):
@@ -43,3 +59,5 @@ class GameAnswer(models.Model):
 
     def __str__(self):
         return f'{self.word} - {self.user_answer}'
+    
+
