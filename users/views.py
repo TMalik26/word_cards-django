@@ -1,8 +1,10 @@
 from django.contrib import auth
+from django.db.models import Count, Max
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.urls import reverse
 
+from simulator.models import Topic
 from users.forms import UserLoginForm, UserProfileForm, UserRegistrationForm
 
 
@@ -31,6 +33,16 @@ def user_logout(request):
 
 
 def profile(request):
+    user = request.user
+    user_topics = (
+        Topic.objects
+        .filter(game_sessions__user=user)
+        .annotate(
+            words_count=Count('words', distinct=True),
+            progress=Max('game_sessions__result_percent')
+        )
+        .distinct()
+    )
     if request.method == "POST":
         form = UserProfileForm(data=request.POST, instance=request.user, files=request.FILES)
         if form.is_valid():
@@ -40,7 +52,8 @@ def profile(request):
         form = UserProfileForm(instance=request.user)
     context = {
         'title': 'Акаунт',
-        'form': form
+        'form': form,
+        'topics': user_topics,
     }
     return render(request, 'users/profile.html', context=context)
 

@@ -17,6 +17,12 @@ class GameSession(models.Model):
     is_finished = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     result_percent = models.PositiveBigIntegerField(default=0)
+    
+    MODE_CHOICES = [
+        ('full', 'Full'),
+        ('mistakes', 'Mistakes'),
+    ]
+    mode = models.CharField(max_length=10, choices=MODE_CHOICES, default='full')
 
     class Meta:
         db_table = 'game_session'
