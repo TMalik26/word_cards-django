@@ -3,7 +3,6 @@
 
 {% block content %}
 <div class="container mt-5 pt-4">
-
     <!-- Кнопка назад -->
     <div class="d-flex justify-content-start mb-5">
         <a href="{% url 'catalog:index' %}"
@@ -12,16 +11,13 @@
             Повернутись до вибору теми
         </a>
     </div>
-
     <!-- Заголовок -->
     <h1 class="mb-3 fw-bold text-center">
         {{ topic.name }}
     </h1>
-
     <p class="text-center text-muted mb-4">
         Оберіть напрям перекладу для практики
     </p>
-
     <!-- Форма вибору направлення й старту гри -->
     <form method="post" action="{% url "game:direction" topic.slug %}">
         {% csrf_token %}
@@ -31,7 +27,6 @@
                 <h5 class="text-center mb-3 fw-semibold">
                     Оберіть напрям перекладу
                 </h5>
-
                 <div class="d-flex flex-column align-items-center mb-2">
                     <div class="form-check text-center mb-2">
                         <input class="form-check-input" type="radio" 
@@ -40,7 +35,6 @@
                             З англійської → на українську
                         </label>
                     </div>
-
                     <div class="form-check text-center">
                         <input class="form-check-input" type="radio" 
                             name="direction" id="ukr_to_eng" value="ukr_eng">
@@ -49,7 +43,6 @@
                         </label>
                     </div>
                 </div>
-
             </div>
         </div>
         <!-- Кнопка почати -->
@@ -60,7 +53,5 @@
             </button>
         </div>
     </form>
-
 </div>
-
 {% endblock %}

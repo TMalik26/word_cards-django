@@ -3,37 +3,31 @@
 
 {% block content %}
 <div class="container mt-5 pt-4">
-
-    <!-- Кнопка действия назад -->
+    <!-- Кнопка назад -->
     <div class="d-flex justify-content-start mb-5">
         <a href="{% url 'catalog:index' %}" class="btn btn-outline-secondary" 
            style="width: 180px; height: 60px; display: flex; justify-content: center; align-items: center;">
             Повернутись до вибору теми
         </a>
     </div>
-
-    <!-- Заголовок темы -->
+    <!-- Заголовок теми -->
     <h1 class="mb-3 fw-bold text-center">
         {{ topic.name }}
     </h1>
-
-    <!-- Подзаголовок -->
+    <!-- Підзаголовок -->
     <p class="text-center text-muted mb-4">
-        Вве правильний переклад
+        Введіть правильний переклад
     </p>
-
-    <!-- Слово для перевода -->
+    <!-- Слово для перекладу -->
     <div class="d-flex justify-content-center mb-4">
         <div class="card p-4" style="max-width: 420px; width: 100%;">
             <h3 class="text-center mb-3">{{ word }}</h3>
-
-            <!-- Форма ответа -->
+            <!-- Форма відповіді користувача -->
             <form method="post" action="{% url "game:play" session.id%}">
                 {% csrf_token %}
                 <div class="mb-3">
                     <input type="text" name="user_answer" class="form-control text-center" placeholder="Введіть переклад">
                 </div>
-
                 <div class="d-flex justify-content-center gap-3">
                     <button type="submit" class="btn btn-outline-success"
                             name="action" value="answer" 
@@ -47,13 +41,11 @@
                     </button>
                 </div>
             </form>
-
-            <!-- Прогресс -->
+            <!-- Прогрес -->
             <p class="text-center text-muted mt-3">
-                Питання Х з У
+                Питання {{current_word}} з {{total_words}}
             </p>
         </div>
     </div>
-
 </div>
 {% endblock %}

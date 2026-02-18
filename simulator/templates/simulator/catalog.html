@@ -10,11 +10,8 @@
                 aria-expanded="false">
                 Фільтри
             </button>
-
             <form action="{% url "catalog:index" %}" method="get" class="dropdown-menu bg-dark" data-bs-theme="dark">
-                <!-- чекбокс кнопки ПО КАТЕГОРИМ ТЕМ и ПО ПРОГРЕССУ-->
                 <p class="text-white mx-3 mt-3">Категорії тем:</p>
-
                 {% for category in categories %}
                 <div class="form-check text-white mx-3">
                     <input class="form-check-input" type="checkbox" name="category"
@@ -24,7 +21,6 @@
                     </label>
                 </div>
                 {% endfor %}
-
                 <p class="text-white mx-3 mt-3">Прогрес навчання:</p>
                 <div class="form-check text-white mx-3">
                     <input class="form-check-input" type="checkbox" name="progress" id="progress-new" value="new"
@@ -47,7 +43,6 @@
                         Робота над помилками
                     </label>
                 </div>
-                <!-- радиобатон СОРТИРОВКИ -->
                 <p class="text-white mx-3 mt-3">Сортувати за:</p>
                 <div class="form-check text-white mx-3">
                     <input class="form-check-input" type="radio" name="order_by" id="order-progress" value="-progress"
@@ -66,7 +61,7 @@
                 <button type="submit" class="btn btn-primary mx-3 mt-3">Применить</button>
             </form>
         </div>
-        <!-- СПИСОК ТЕМ -->
+        <!-- Перелік тем -->
         <div class="mt-5 pt-5">
             <!-- Заголовок -->
             <h1 class="mb-4 fw-bold text-center">
@@ -78,31 +73,26 @@
                 або повторити вже пройдену тему.
             </p>
             <!-- Самі теми по порядку -->
-
             {% for topic in topics %}
             <div class="list-group mb-3">
                 <div class="list-group-item mb-3 shadow-sm rounded">
                     <div class="row align-items-center justify-content-between">
-                        <!-- Назва темы -->
+                        <!-- Назва теми -->
                         <div class="col-md-4">
                             <h5 class="mb-1 fw-bold">{{ topic.name }}</h5>
                             <small class="text-muted">Кількість слів: {{ topic.words_count }}</small>
                         </div>
-
                         <!-- Прогрес -->
                         <div class="col-md d-flex align-items-center">
-                            {% with percent=topic_progress|get_item:topic.id|default:0 %}
                             <div class="progress w-100" style="height: 20px;">
                                 <div class="progress-bar 
-                                    {% if percent == 100 %}bg-success{% elif percent == 0 %}bg-secondary{% else %}bg-warning{% endif %}"
+                                    {% if topic.progress|default:0 == 100 %}bg-success{% elif topic.progress|default:0 == 0 %}bg-secondary{% else %}bg-warning{% endif %}"
                                     role="progressbar"
-                                    style="width: {{ percent }}%;">
-                                    {{ percent }}%
+                                    style="width: {{ topic.progress|default:0 }}%;">
+                                    {{ topic.progress|default:0 }}%
                                 </div>
                             </div>
-                            {% endwith %}
                         </div>
-                        
                         <!-- Переглянути тему -->
                         <div class="col-auto d-flex">
                             <a href="{% url 'catalog:topic' topic.slug %}" 
@@ -115,7 +105,6 @@
                 </div>    
             </div>
             {% endfor %}
-
         </div>
     </div>
 {% endblock %}

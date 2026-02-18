@@ -3,7 +3,6 @@
 
 {% block content %}
 <div class="container mt-5 pt-4">
-
     <!-- Кнопка повернутися назад -->
     <div class="d-flex justify-content-start mb-5">
         <a href={% url "catalog:index" %} class="btn btn-outline-secondary" 
@@ -11,17 +10,14 @@
             Повернутись до вибору теми
         </a>
     </div>
-    
     <!-- Заголовок -->
     <h1 class="mb-3 fw-bold text-center">
         Business English
     </h1>
-
     <!-- Підзаголовок -->
     <p class="text-center text-muted mb-4">
         Перегляд слів у темі
     </p>
-
     <!-- Таблиця слів -->
     <div class="table-responsive mb-5">
         <table class="table table-striped align-middle">
@@ -41,8 +37,7 @@
             </tbody>
         </table>
     </div>
-
-        <!-- Кнопка почати -->
+    <!-- Кнопка почати -->
     <div class="d-flex justify-content-center mb-5">
         <a href="{% url 'game:prepare' topic.slug %}?mode=full"
             class="btn btn-outline-success"
@@ -50,8 +45,8 @@
             Почати тему
         </a>
     </div>
-    {% if 100 > percent > 0 %}
     <!-- Кнопка працювати над помилками -->
+    {% if percent|default:0 > 0 and percent < 100 %}
     <div class="d-flex justify-content-center mb-5">
         <a href="{% url 'game:prepare' topic.slug %}?mode=mistakes"
             class="btn btn-outline-warning"
@@ -60,15 +55,5 @@
         </a>
     </div>
     {% endif %}
-
-
-    {% comment %} <!-- Кнопка почати -->
-    <div class="d-flex justify-content-center mb-5">
-        <a href="#" class="btn btn-outline-warning" 
-        style="width: 180px; height: 60px; display: flex; justify-content: center; align-items: center;">
-            Почати тему
-        </a>
-    </div> {% endcomment %}
-
 </div>
 {% endblock %}

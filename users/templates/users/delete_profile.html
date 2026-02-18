@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <h2>Видалення аккаунту</h2>
+
+    <p>Ви впевнені, що бажаєте видалити свій акаунт?</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-dark">Так, видалити</button>
+    </form>
+
+    <a href="{% url 'users:profile' %}">Ні</a>
+{% endblock  %}

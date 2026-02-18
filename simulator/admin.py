@@ -2,9 +2,7 @@ from django.contrib import admin
 
 from simulator.models import Category, Topic, Word
 
-# admin.site.register(Category)
-# admin.site.register(Topic)
-# admin.site.register(Word)
+
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {

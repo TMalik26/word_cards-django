@@ -1,4 +1,6 @@
 from django.contrib import auth
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.db.models import Count, Max
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render
@@ -62,9 +64,9 @@ def registration(request):
     if request.method == 'POST':
         form = UserRegistrationForm(data=request.POST)
         if form.is_valid():
-            form.save()
-            user = form.instance
-            auth.login(request, user)
+            user = form.save()
+            user.backend = 'django.contrib.auth.backends.ModelBackend'
+            login(request, user)
             return HttpResponseRedirect(reverse('main:index'))
     else:
         form = UserRegistrationForm()
@@ -73,3 +75,12 @@ def registration(request):
         'form': form,
     }
     return render(request, 'users/registration.html', context=context)
+
+
+@login_required
+def delete_profile(request):
+    if request.method == "POST":
+        request.user.delete()
+        return redirect("main:index")
+
+    return render(request, "users/delete_profile.html")

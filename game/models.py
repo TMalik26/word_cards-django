@@ -6,18 +6,15 @@ from users.models import User
 class GameSession(models.Model):
     topic = models.ForeignKey(to=Topic, on_delete=models.CASCADE, related_name='game_sessions')
     user = models.ForeignKey(to=User, on_delete=models.CASCADE, related_name='game_sessions')
-
     DIRECTION_CHOICES = [
         ('eng_ukr', 'Англійська → Українська'),
         ('ukr_eng', 'Українська → Англійська'),
     ]
-
     direction = models.CharField(max_length=10, choices=DIRECTION_CHOICES)
     current_index = models.PositiveIntegerField(default=0)
     is_finished = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     result_percent = models.PositiveBigIntegerField(default=0)
-    
     MODE_CHOICES = [
         ('full', 'Full'),
         ('mistakes', 'Mistakes'),
@@ -65,5 +62,3 @@ class GameAnswer(models.Model):
 
     def __str__(self):
         return f'{self.word} - {self.user_answer}'
-    
-
