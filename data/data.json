@@ -1,0 +1,748 @@
+[
+  {
+    "category": "Everyday Life",
+    "slug_category": "everyday-life",
+    "topics": [
+      {
+        "name": "Morning Routines",
+        "slug_topic": "morning-routines",
+        "words": [
+          {"ukr": "Вставати", "eng": "Wake up", "slug_word": "wake-up"},
+          {"ukr": "Чистити зуби", "eng": "Brush teeth", "slug_word": "brush-teeth"},
+          {"ukr": "Приймати душ", "eng": "Take a shower", "slug_word": "take-a-shower"},
+          {"ukr": "Одягатися", "eng": "Get dressed", "slug_word": "get-dressed"},
+          {"ukr": "Робити зарядку", "eng": "Do exercises", "slug_word": "do-exercises"},
+          {"ukr": "Снідати", "eng": "Have breakfast", "slug_word": "have-breakfast"},
+          {"ukr": "Пити каву", "eng": "Drink coffee", "slug_word": "drink-coffee"},
+          {"ukr": "Мити обличчя", "eng": "Wash face", "slug_word": "wash-face"},
+          {"ukr": "Розчісувати волосся", "eng": "Comb hair", "slug_word": "comb-hair"},
+          {"ukr": "Намазати крем", "eng": "Apply cream", "slug_word": "apply-cream"},
+          {"ukr": "Заправляти ліжко", "eng": "Make the bed", "slug_word": "make-the-bed"},
+          {"ukr": "Планувати день", "eng": "Plan the day", "slug_word": "plan-the-day"},
+          {"ukr": "Перевіряти пошту", "eng": "Check email", "slug_word": "check-email"},
+          {"ukr": "Слухати новини", "eng": "Listen to the news", "slug_word": "listen-to-the-news"},
+          {"ukr": "Читати книгу", "eng": "Read a book", "slug_word": "read-a-book"},
+          {"ukr": "Виходити з дому", "eng": "Leave the house", "slug_word": "leave-the-house"},
+          {"ukr": "Надягати взуття", "eng": "Put on shoes", "slug_word": "put-on-shoes"},
+          {"ukr": "Застібати пальто", "eng": "Button the coat", "slug_word": "button-the-coat"},
+          {"ukr": "Вмикати світло", "eng": "Turn on the lights", "slug_word": "turn-on-the-lights"},
+          {"ukr": "Вмикати будильник", "eng": "Set the alarm", "slug_word": "set-the-alarm"}
+        ]
+      },
+      {
+        "name": "Household Chores",
+        "slug_topic": "household-chores",
+        "words": [
+          {"ukr": "Мити посуд", "eng": "Wash the dishes", "slug_word": "wash-the-dishes"},
+          {"ukr": "Пилососити", "eng": "Vacuum", "slug_word": "vacuum"},
+          {"ukr": "Прибирати кімнату", "eng": "Clean the room", "slug_word": "clean-the-room"},
+          {"ukr": "Застеляти ліжко", "eng": "Make the bed", "slug_word": "make-the-bed"},
+          {"ukr": "Виносити сміття", "eng": "Take out the trash", "slug_word": "take-out-the-trash"},
+          {"ukr": "Стирати білизну", "eng": "Do the laundry", "slug_word": "do-the-laundry"},
+          {"ukr": "Гладити одяг", "eng": "Iron clothes", "slug_word": "iron-clothes"},
+          {"ukr": "Поливати квіти", "eng": "Water the plants", "slug_word": "water-the-plants"},
+          {"ukr": "Мити вікна", "eng": "Clean the windows", "slug_word": "clean-the-windows"},
+          {"ukr": "Протирати пил", "eng": "Dust", "slug_word": "dust"},
+          {"ukr": "Мити підлогу", "eng": "Mop the floor", "slug_word": "mop-the-floor"},
+          {"ukr": "Готувати їжу", "eng": "Cook", "slug_word": "cook"},
+          {"ukr": "Прибирати холодильник", "eng": "Clean the fridge", "slug_word": "clean-the-fridge"},
+          {"ukr": "Мити ванну", "eng": "Clean the bathroom", "slug_word": "clean-the-bathroom"},
+          {"ukr": "Сортувати сміття", "eng": "Sort the trash", "slug_word": "sort-the-trash"},
+          {"ukr": "Переставляти меблі", "eng": "Rearrange furniture", "slug_word": "rearrange-furniture"},
+          {"ukr": "Протирати столи", "eng": "Wipe the tables", "slug_word": "wipe-the-tables"},
+          {"ukr": "Мити посудомийку", "eng": "Load the dishwasher", "slug_word": "load-the-dishwasher"},
+          {"ukr": "Чистити плиту", "eng": "Clean the stove", "slug_word": "clean-the-stove"},
+          {"ukr": "Мити дзеркала", "eng": "Clean mirrors", "slug_word": "clean-mirrors"}
+        ]
+      },
+      {
+        "name": "Shopping & Groceries",
+        "slug_topic": "shopping-groceries",
+        "words": [
+          {"ukr": "Хліб", "eng": "Bread", "slug_word": "bread"},
+          {"ukr": "Молоко", "eng": "Milk", "slug_word": "milk"},
+          {"ukr": "Сир", "eng": "Cheese", "slug_word": "cheese"},
+          {"ukr": "Яйця", "eng": "Eggs", "slug_word": "eggs"},
+          {"ukr": "Масло", "eng": "Butter", "slug_word": "butter"},
+          {"ukr": "Цукор", "eng": "Sugar", "slug_word": "sugar"},
+          {"ukr": "Сіль", "eng": "Salt", "slug_word": "salt"},
+          {"ukr": "Рис", "eng": "Rice", "slug_word": "rice"},
+          {"ukr": "Овочі", "eng": "Vegetables", "slug_word": "vegetables"},
+          {"ukr": "Фрукти", "eng": "Fruits", "slug_word": "fruits"},
+          {"ukr": "М’ясо", "eng": "Meat", "slug_word": "meat"},
+          {"ukr": "Риба", "eng": "Fish", "slug_word": "fish"},
+          {"ukr": "Хлібці", "eng": "Crackers", "slug_word": "crackers"},
+          {"ukr": "Сок", "eng": "Juice", "slug_word": "juice"},
+          {"ukr": "Макарони", "eng": "Pasta", "slug_word": "pasta"},
+          {"ukr": "Чай", "eng": "Tea", "slug_word": "tea"}
+        ]
+      },
+      {
+        "name": "Hobbies & Leisure",
+        "slug_topic": "hobbies-leisure",
+        "words": [
+          {"ukr": "Малювання", "eng": "Drawing", "slug_word": "drawing"},
+          {"ukr": "Читання", "eng": "Reading", "slug_word": "reading"},
+          {"ukr": "Музика", "eng": "Music", "slug_word": "music"},
+          {"ukr": "Фотографія", "eng": "Photography", "slug_word": "photography"},
+          {"ukr": "Спорт", "eng": "Sports", "slug_word": "sports"},
+          {"ukr": "Плавання", "eng": "Swimming", "slug_word": "swimming"},
+          {"ukr": "Танці", "eng": "Dancing", "slug_word": "dancing"},
+          {"ukr": "Кіно", "eng": "Cinema", "slug_word": "cinema"},
+          {"ukr": "Комп’ютерні ігри", "eng": "Video games", "slug_word": "video-games"},
+          {"ukr": "Подорожі", "eng": "Traveling", "slug_word": "traveling"},
+          {"ukr": "Йога", "eng": "Yoga", "slug_word": "yoga"},
+          {"ukr": "Пікніки", "eng": "Picnics", "slug_word": "picnics"},
+          {"ukr": "Рукоділля", "eng": "Handicrafts", "slug_word": "handicrafts"},
+          {"ukr": "Музичні інструменти", "eng": "Musical instruments", "slug_word": "musical-instruments"},
+          {"ukr": "Катання на велосипеді", "eng": "Cycling", "slug_word": "cycling"},
+          {"ukr": "Садівництво", "eng": "Gardening", "slug_word": "gardening"}
+        ]
+      },
+      {
+        "name": "Traveling Around Town",
+        "slug_topic": "traveling-around-town",
+        "words": [
+          {"ukr": "Автобус", "eng": "Bus", "slug_word": "bus"},
+          {"ukr": "Трамвай", "eng": "Tram", "slug_word": "tram"},
+          {"ukr": "Метро", "eng": "Subway", "slug_word": "subway"},
+          {"ukr": "Поїзд", "eng": "Train", "slug_word": "train"},
+          {"ukr": "Таксі", "eng": "Taxi", "slug_word": "taxi"},
+          {"ukr": "Велосипед", "eng": "Bicycle", "slug_word": "bicycle"},
+          {"ukr": "Пішохід", "eng": "Pedestrian", "slug_word": "pedestrian"},
+          {"ukr": "Перехрестя", "eng": "Intersection", "slug_word": "intersection"},
+          {"ukr": "Світлофор", "eng": "Traffic light", "slug_word": "traffic-light"},
+          {"ukr": "Зупинка", "eng": "Stop", "slug_word": "stop"},
+          {"ukr": "Станція", "eng": "Station", "slug_word": "station"},
+          {"ukr": "Маршрут", "eng": "Route", "slug_word": "route"},
+          {"ukr": "Квиток", "eng": "Ticket", "slug_word": "ticket"},
+          {"ukr": "Карта міста", "eng": "City map", "slug_word": "city-map"},
+          {"ukr": "Дорога", "eng": "Road", "slug_word": "road"},
+          {"ukr": "Пробка", "eng": "Traffic jam", "slug_word": "traffic-jam"}
+        ]
+      }
+    ]
+  },
+    {
+    "category": "Travel & Directions",
+    "slug_category": "travel-directions",
+    "topics": [
+      {
+        "name": "Airports & Flights",
+        "slug_topic": "airports-flights",
+        "words": [
+          {"ukr": "Аеропорт", "eng": "Airport", "slug_word": "airport"},
+          {"ukr": "Рейс", "eng": "Flight", "slug_word": "flight"},
+          {"ukr": "Багаж", "eng": "Luggage", "slug_word": "luggage"},
+          {"ukr": "Паспорт", "eng": "Passport", "slug_word": "passport"},
+          {"ukr": "Квиток", "eng": "Ticket", "slug_word": "ticket"},
+          {"ukr": "Контроль безпеки", "eng": "Security check", "slug_word": "security-check"},
+          {"ukr": "Вихід на посадку", "eng": "Boarding gate", "slug_word": "boarding-gate"},
+          {"ukr": "Реєстрація", "eng": "Check-in", "slug_word": "check-in"},
+          {"ukr": "Валіза", "eng": "Suitcase", "slug_word": "suitcase"},
+          {"ukr": "Ручна поклажа", "eng": "Hand luggage", "slug_word": "hand-luggage"},
+          {"ukr": "Вильот", "eng": "Departure", "slug_word": "departure"},
+          {"ukr": "Приліт", "eng": "Arrival", "slug_word": "arrival"},
+          {"ukr": "Літак", "eng": "Airplane", "slug_word": "airplane"},
+          {"ukr": "Навігація", "eng": "Navigation", "slug_word": "navigation"},
+          {"ukr": "Термінал", "eng": "Terminal", "slug_word": "terminal"}
+        ]
+      },
+      {
+        "name": "Hotels & Accommodation",
+        "slug_topic": "hotels-accommodation",
+        "words": [
+          {"ukr": "Готель", "eng": "Hotel", "slug_word": "hotel"},
+          {"ukr": "Номер", "eng": "Room", "slug_word": "room"},
+          {"ukr": "Стійка реєстрацї", "eng": "Reception", "slug_word": "reception"},
+          {"ukr": "Бронювання", "eng": "Booking", "slug_word": "booking"},
+          {"ukr": "Ресторан", "eng": "Restaurant", "slug_word": "restaurant"},
+          {"ukr": "Пральня", "eng": "Laundry", "slug_word": "laundry"},
+          {"ukr": "Ключ", "eng": "Key", "slug_word": "key"},
+          {"ukr": "Вид з вікна", "eng": "View", "slug_word": "view"},
+          {"ukr": "Басейн", "eng": "Pool", "slug_word": "pool"},
+          {"ukr": "Спа", "eng": "Spa", "slug_word": "spa"},
+          {"ukr": "Сніданок", "eng": "Breakfast", "slug_word": "breakfast"},
+          {"ukr": "Кондиціонер", "eng": "Air conditioning", "slug_word": "air-conditioning"}
+        ]
+      },
+      {
+        "name": "Public Transport",
+        "slug_topic": "public-transport",
+        "words": [
+          {"ukr": "Автобус", "eng": "Bus", "slug_word": "bus"},
+          {"ukr": "Трамвай", "eng": "Tram", "slug_word": "tram"},
+          {"ukr": "Метро", "eng": "Subway", "slug_word": "subway"},
+          {"ukr": "Квиток", "eng": "Ticket", "slug_word": "ticket"},
+          {"ukr": "Розклад", "eng": "Schedule", "slug_word": "schedule"},
+          {"ukr": "Зупинка", "eng": "Stop", "slug_word": "stop"},
+          {"ukr": "Станція", "eng": "Station", "slug_word": "station"},
+          {"ukr": "Водій", "eng": "Driver", "slug_word": "driver"},
+          {"ukr": "Пасажир", "eng": "Passenger", "slug_word": "passenger"},
+          {"ukr": "Маршрут", "eng": "Route", "slug_word": "route"},
+          {"ukr": "Переповнений", "eng": "Crowded", "slug_word": "crowded"},
+          {"ukr": "Платформа", "eng": "Platform", "slug_word": "platform"},
+          {"ukr": "Пересадка", "eng": "Transfer", "slug_word": "transfer"},
+          {"ukr": "Автобусна лінія", "eng": "Bus line", "slug_word": "bus-line"},
+          {"ukr": "Карта", "eng": "Map", "slug_word": "map"}
+        ]
+      },
+      {
+        "name": "Road Trips & Driving",
+        "slug_topic": "road-trips-driving",
+        "words": [
+          {"ukr": "Дорога", "eng": "Road", "slug_word": "road"},
+          {"ukr": "Водій", "eng": "Driver", "slug_word": "driver"},
+          {"ukr": "Автомобіль", "eng": "Car", "slug_word": "car"},
+          {"ukr": "Бензин", "eng": "Fuel", "slug_word": "fuel"},
+          {"ukr": "Швидкість", "eng": "Speed", "slug_word": "speed"},
+          {"ukr": "Навігатор", "eng": "Gps", "slug_word": "gps"},
+          {"ukr": "Зупинка", "eng": "Stop", "slug_word": "stop"},
+          {"ukr": "Подорож", "eng": "Trip", "slug_word": "trip"},
+          {"ukr": "Багажник", "eng": "Trunk", "slug_word": "trunk"},
+          {"ukr": "Ремінь безпеки", "eng": "Seatbelt", "slug_word": "seatbelt"},
+          {"ukr": "Аварія", "eng": "Accident", "slug_word": "accident"},
+          {"ukr": "Карта", "eng": "Map", "slug_word": "map"},
+          {"ukr": "Об’їзд", "eng": "Detour", "slug_word": "detour"},
+          {"ukr": "Відпочинок", "eng": "Rest", "slug_word": "rest"},
+          {"ukr": "Перевірка машини", "eng": "Car check", "slug_word": "car-check"}
+        ]
+      },
+      {
+        "name": "Sightseeing & Attractions",
+        "slug_topic": "sightseeing-attractions",
+        "words": [
+          {"ukr": "Музей", "eng": "Museum", "slug_word": "museum"},
+          {"ukr": "Галерея", "eng": "Gallery", "slug_word": "gallery"},
+          {"ukr": "Парк", "eng": "Park", "slug_word": "park"},
+          {"ukr": "Замок", "eng": "Castle", "slug_word": "castle"},
+          {"ukr": "Собор", "eng": "Cathedral", "slug_word": "cathedral"},
+          {"ukr": "Площа", "eng": "Square", "slug_word": "square"},
+          {"ukr": "Вежа", "eng": "Tower", "slug_word": "tower"},
+          {"ukr": "Набережна", "eng": "Promenade", "slug_word": "promenade"},
+          {"ukr": "Оглядовий майданчик", "eng": "Viewpoint", "slug_word": "viewpoint"},
+          {"ukr": "Ринок", "eng": "Market", "slug_word": "market"},
+          {"ukr": "Ботанічний сад", "eng": "Botanical garden", "slug_word": "botanical-garden"},
+          {"ukr": "Театр", "eng": "Theater", "slug_word": "theater"},
+          {"ukr": "Пам’ятна табличка", "eng": "Plaque", "slug_word": "plaque"},
+          {"ukr": "Водоспад", "eng": "Waterfall", "slug_word": "waterfall"}
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Food & Drink",
+    "slug_category": "food-drink",
+    "topics": [
+      {
+        "name": "Fruits & Vegetables",
+        "slug_topic": "fruits-vegetables",
+        "words": [
+          {"ukr": "Яблуко", "eng": "Apple", "slug_word": "apple"},
+          {"ukr": "Банан", "eng": "Banana", "slug_word": "banana"},
+          {"ukr": "Апельсин", "eng": "Orange", "slug_word": "orange"},
+          {"ukr": "Груша", "eng": "Pear", "slug_word": "pear"},
+          {"ukr": "Виноград", "eng": "Grape", "slug_word": "grape"},
+          {"ukr": "Полуниця", "eng": "Strawberry", "slug_word": "strawberry"},
+          {"ukr": "Лимон", "eng": "Lemon", "slug_word": "lemon"},
+          {"ukr": "Морква", "eng": "Carrot", "slug_word": "carrot"},
+          {"ukr": "Помідор", "eng": "Tomato", "slug_word": "tomato"},
+          {"ukr": "Огірок", "eng": "Cucumber", "slug_word": "cucumber"},
+          {"ukr": "Картопля", "eng": "Potato", "slug_word": "potato"},
+          {"ukr": "Перець", "eng": "Bell pepper", "slug_word": "bell-pepper"},
+          {"ukr": "Баклажан", "eng": "Eggplant", "slug_word": "eggplant"},
+          {"ukr": "Шпинат", "eng": "Spinach", "slug_word": "spinach"},
+          {"ukr": "Капуста", "eng": "Cabbage", "slug_word": "cabbage"},
+          {"ukr": "Броколі", "eng": "Broccoli", "slug_word": "broccoli"},
+          {"ukr": "Часник", "eng": "Garlic", "slug_word": "garlic"}
+        ]
+      },
+      {
+        "name": "Cooking & Recipes",
+        "slug_topic": "cooking-recipes",
+        "words": [
+          {"ukr": "Варити", "eng": "To boil", "slug_word": "to-boil"},
+          {"ukr": "Смажити", "eng": "To fry", "slug_word": "to-fry"},
+          {"ukr": "Запікати", "eng": "To bake", "slug_word": "to-bake"},
+          {"ukr": "Тушкувати", "eng": "To stew", "slug_word": "to-stew"},
+          {"ukr": "Змішувати", "eng": "To mix", "slug_word": "to-mix"},
+          {"ukr": "Нарізати", "eng": "To chop", "slug_word": "to-chop"},
+          {"ukr": "Замішувати", "eng": "To knead", "slug_word": "to-knead"},
+          {"ukr": "Додавати", "eng": "To add", "slug_word": "to-add"},
+          {"ukr": "Приправляти", "eng": "To season", "slug_word": "to-season"},
+          {"ukr": "Подавати", "eng": "To serve", "slug_word": "to-serve"},
+          {"ukr": "Мити", "eng": "To wash", "slug_word": "to-wash"},
+          {"ukr": "Чистити", "eng": "To peel", "slug_word": "to-peel"},
+          {"ukr": "Збивати", "eng": "To whisk", "slug_word": "to-whisk"},
+          {"ukr": "Перемішувати", "eng": "To stir", "slug_word": "to-stir"},
+          {"ukr": "Смачно", "eng": "Tasty", "slug_word": "tasty"},
+          {"ukr": "Рецепт", "eng": "Recipe", "slug_word": "recipe"},
+          {"ukr": "Спеції", "eng": "Spices", "slug_word": "spices"}
+        ]
+      },
+      {
+        "name": "Restaurants & Ordering",
+        "slug_topic": "restaurants-ordering",
+        "words": [
+          {"ukr": "Ресторан", "eng": "Restaurant", "slug_word": "restaurant"},
+          {"ukr": "Меню", "eng": "Menu", "slug_word": "menu"},
+          {"ukr": "Офіціант", "eng": "Waiter", "slug_word": "waiter"},
+          {"ukr": "Замовляти", "eng": "To order", "slug_word": "to-order"},
+          {"ukr": "Їжа", "eng": "Food", "slug_word": "food"},
+          {"ukr": "Напій", "eng": "Drink", "slug_word": "drink"},
+          {"ukr": "Столик", "eng": "Table", "slug_word": "table"},
+          {"ukr": "Рахунок", "eng": "Bill", "slug_word": "bill"},
+          {"ukr": "Десерт", "eng": "Dessert", "slug_word": "dessert"},
+          {"ukr": "Закуска", "eng": "Appetizer", "slug_word": "appetizer"},
+          {"ukr": "Обід", "eng": "Lunch", "slug_word": "lunch"},
+          {"ukr": "Вечеря", "eng": "Dinner", "slug_word": "dinner"},
+          {"ukr": "Подача", "eng": "Serving", "slug_word": "serving"},
+          {"ukr": "Порада", "eng": "Recommendation", "slug_word": "recommendation"},
+          {"ukr": "Кухня", "eng": "Cuisine", "slug_word": "cuisine"},
+          {"ukr": "Чай", "eng": "Tea", "slug_word": "tea"},
+          {"ukr": "Кава", "eng": "Coffee", "slug_word": "coffee"}
+        ]
+      },
+      {
+        "name": "Beverages & Drinks",
+        "slug_topic": "beverages-drinks",
+        "words": [
+          {"ukr": "Вода", "eng": "Water", "slug_word": "water"},
+          {"ukr": "Сік", "eng": "Juice", "slug_word": "juice"},
+          {"ukr": "Кава", "eng": "Coffee", "slug_word": "coffee"},
+          {"ukr": "Чай", "eng": "Tea", "slug_word": "tea"},
+          {"ukr": "Лимонад", "eng": "Lemonade", "slug_word": "lemonade"},
+          {"ukr": "Газована вода", "eng": "Soda", "slug_word": "soda"},
+          {"ukr": "Молоко", "eng": "Milk", "slug_word": "milk"},
+          {"ukr": "Коктейль", "eng": "Cocktail", "slug_word": "cocktail"},
+          {"ukr": "Пиво", "eng": "Beer", "slug_word": "beer"},
+          {"ukr": "Вино", "eng": "Wine", "slug_word": "wine"},
+          {"ukr": "Смузі", "eng": "Smoothie", "slug_word": "smoothie"},
+          {"ukr": "Енергетик", "eng": "Energy drink", "slug_word": "energy-drink"},
+          {"ukr": "Гарячий шоколад", "eng": "Hot chocolate", "slug_word": "hot-chocolate"},
+          {"ukr": "Лимонна вода", "eng": "Lemon water", "slug_word": "lemon-water"},
+          {"ukr": "Морозиво-кава", "eng": "Frappe", "slug_word": "frappe"},
+          {"ukr": "Айс-чай", "eng": "Iced tea", "slug_word": "iced-tea"}
+        ]
+      },
+      {
+        "name": "Desserts & Sweets",
+        "slug_topic": "desserts-sweets",
+        "words": [
+          {"ukr": "Торт", "eng": "Cake", "slug_word": "cake"},
+          {"ukr": "Морозиво", "eng": "Ice cream", "slug_word": "ice-cream"},
+          {"ukr": "Шоколад", "eng": "Chocolate", "slug_word": "chocolate"},
+          {"ukr": "Печиво", "eng": "Cookies", "slug_word": "cookies"},
+          {"ukr": "Цукерки", "eng": "Candies", "slug_word": "candies"},
+          {"ukr": "Кекс", "eng": "Cupcake", "slug_word": "cupcake"},
+          {"ukr": "Пиріг", "eng": "Pie", "slug_word": "pie"},
+          {"ukr": "Джем", "eng": "Jam", "slug_word": "jam"},
+          {"ukr": "Желе", "eng": "Jelly", "slug_word": "jelly"},
+          {"ukr": "Крем", "eng": "Cream", "slug_word": "cream"},
+          {"ukr": "Тістечко", "eng": "Pastry", "slug_word": "pastry"},
+          {"ukr": "Вафлі", "eng": "Waffles", "slug_word": "waffles"},
+          {"ukr": "Пончик", "eng": "Donut", "slug_word": "donut"},
+          {"ukr": "Мед", "eng": "Honey", "slug_word": "honey"},
+          {"ukr": "Фруктовий салат", "eng": "Fruit salad", "slug_word": "fruit-salad"},
+          {"ukr": "Морозильник", "eng": "Freezer", "slug_word": "freezer"}
+        ]
+      }
+    ]
+  },
+    {
+    "category": "Work & School",
+    "slug_category": "work-school",
+    "topics": [
+      {
+        "name": "School Subjects",
+        "slug_topic": "school-subjects",
+        "words": [
+          {"ukr": "Математика", "eng": "Mathematics", "slug_word": "mathematics"},
+          {"ukr": "Фізика", "eng": "Physics", "slug_word": "physics"},
+          {"ukr": "Хімія", "eng": "Chemistry", "slug_word": "chemistry"},
+          {"ukr": "Біологія", "eng": "Biology", "slug_word": "biology"},
+          {"ukr": "Історія", "eng": "History", "slug_word": "history"},
+          {"ukr": "Географія", "eng": "Geography", "slug_word": "geography"},
+          {"ukr": "Англійська", "eng": "English", "slug_word": "english"},
+          {"ukr": "Література", "eng": "Literature", "slug_word": "literature"},
+          {"ukr": "Мистецтво", "eng": "Art", "slug_word": "art"},
+          {"ukr": "Музика", "eng": "Music", "slug_word": "music"},
+          {"ukr": "Інформатика", "eng": "Computer science", "slug_word": "computer-science"},
+          {"ukr": "Спорт", "eng": "Physical education", "slug_word": "physical-education"},
+          {"ukr": "Економіка", "eng": "Economics", "slug_word": "economics"},
+          {"ukr": "Філософія", "eng": "Philosophy", "slug_word": "philosophy"}
+        ]
+      },
+      {
+        "name": "Office & Workplace",
+        "slug_topic": "office-workplace",
+        "words": [
+          {"ukr": "Стіл", "eng": "Desk", "slug_word": "desk"},
+          {"ukr": "Комп’ютер", "eng": "Computer", "slug_word": "computer"},
+          {"ukr": "Принтер", "eng": "Printer", "slug_word": "printer"},
+          {"ukr": "Офіс", "eng": "Office", "slug_word": "office"},
+          {"ukr": "Колега", "eng": "Colleague", "slug_word": "colleague"},
+          {"ukr": "Керівник", "eng": "Manager", "slug_word": "manager"},
+          {"ukr": "Нарада", "eng": "Meeting", "slug_word": "meeting"},
+          {"ukr": "Робоче місце", "eng": "Workstation", "slug_word": "workstation"},
+          {"ukr": "Проект", "eng": "Project", "slug_word": "project"},
+          {"ukr": "Папка", "eng": "Folder", "slug_word": "folder"},
+          {"ukr": "Документи", "eng": "Documents", "slug_word": "documents"},
+          {"ukr": "Графік", "eng": "Schedule", "slug_word": "schedule"},
+          {"ukr": "Презентація", "eng": "Presentation", "slug_word": "presentation"},
+          {"ukr": "Електронна пошта", "eng": "Email", "slug_word": "email"},
+          {"ukr": "Телефон", "eng": "Phone", "slug_word": "phone"}
+        ]
+      },
+      {
+        "name": "Study Habits",
+        "slug_topic": "study-habits",
+        "words": [
+          {"ukr": "Конспектувати", "eng": "Take notes", "slug_word": "take-notes"},
+          {"ukr": "Читати", "eng": "Read", "slug_word": "read"},
+          {"ukr": "Повторювати", "eng": "Revise", "slug_word": "revise"},
+          {"ukr": "Планувати", "eng": "Plan", "slug_word": "plan"},
+          {"ukr": "Організовувати", "eng": "Organize", "slug_word": "organize"},
+          {"ukr": "Запам’ятовувати", "eng": "Memorize", "slug_word": "memorize"},
+          {"ukr": "Досліджувати", "eng": "Research", "slug_word": "research"},
+          {"ukr": "Слухати", "eng": "Listen", "slug_word": "listen"},
+          {"ukr": "Писати", "eng": "Write", "slug_word": "write"},
+          {"ukr": "Розв’язувати завдання", "eng": "Solve problems", "slug_word": "solve-problems"},
+          {"ukr": "Задавати питання", "eng": "Ask questions", "slug_word": "ask-questions"},
+          {"ukr": "Читати підручник", "eng": "Read textbook", "slug_word": "read-textbook"},
+          {"ukr": "Використовувати ресурси", "eng": "Use resources", "slug_word": "use-resources"},
+          {"ukr": "Підсумовувати", "eng": "Summarize", "slug_word": "summarize"},
+          {"ukr": "Тренуватися", "eng": "Practice", "slug_word": "practice"}
+        ]
+      },
+      {
+        "name": "Meetings & Presentations",
+        "slug_topic": "meetings-presentations",
+        "words": [
+          {"ukr": "Презентувати", "eng": "Present", "slug_word": "present"},
+          {"ukr": "Нарада", "eng": "Meeting", "slug_word": "meeting"},
+          {"ukr": "Аудиторія", "eng": "Audience", "slug_word": "audience"},
+          {"ukr": "Слайд", "eng": "Slide", "slug_word": "slide"},
+          {"ukr": "Виступ", "eng": "Speech", "slug_word": "speech"},
+          {"ukr": "Доповідь", "eng": "Report", "slug_word": "report"},
+          {"ukr": "Підготовка", "eng": "Preparation", "slug_word": "preparation"},
+          {"ukr": "Обговорення", "eng": "Discussion", "slug_word": "discussion"},
+          {"ukr": "Питання", "eng": "Question", "slug_word": "question"},
+          {"ukr": "Відповідь", "eng": "Answer", "slug_word": "answer"},
+          {"ukr": "Презентаційний макет", "eng": "Layout", "slug_word": "layout"},
+          {"ukr": "Мікрофон", "eng": "Microphone", "slug_word": "microphone"},
+          {"ukr": "Проєктор", "eng": "Projector", "slug_word": "projector"},
+          {"ukr": "Тайм-менеджмент", "eng": "Time management", "slug_word": "time-management"},
+          {"ukr": "Зворотний зв’язок", "eng": "Feedback", "slug_word": "feedback"}
+        ]
+      },
+      {
+        "name": "Career & Job Skills",
+        "slug_topic": "career-job-skills",
+        "words": [
+          {"ukr": "Резюме", "eng": "Resume", "slug_word": "resume"},
+          {"ukr": "Співбесіда", "eng": "Interview", "slug_word": "interview"},
+          {"ukr": "Навички", "eng": "Skills", "slug_word": "skills"},
+          {"ukr": "Робота", "eng": "Job", "slug_word": "job"},
+          {"ukr": "Кар’єра", "eng": "Career", "slug_word": "career"},
+          {"ukr": "Досвід", "eng": "Experience", "slug_word": "experience"},
+          {"ukr": "Комунікація", "eng": "Communication", "slug_word": "communication"},
+          {"ukr": "Лідерство", "eng": "Leadership", "slug_word": "leadership"},
+          {"ukr": "Планування", "eng": "Planning", "slug_word": "planning"},
+          {"ukr": "Управління", "eng": "Management", "slug_word": "management"},
+          {"ukr": "Проектна робота", "eng": "Project work", "slug_word": "project-work"},
+          {"ukr": "Командна робота", "eng": "Teamwork", "slug_word": "teamwork"},
+          {"ukr": "Саморозвиток", "eng": "Self-development", "slug_word": "self-development"},
+          {"ukr": "Критичне мислення", "eng": "Critical thinking", "slug_word": "critical-thinking"}
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Health & Body",
+    "slug_category": "health-body",
+    "topics": [
+      {
+        "name": "Parts of the Body",
+        "slug_topic": "parts-of-the-body",
+        "words": [
+          {"ukr": "Голова", "eng": "Head", "slug_word": "head"},
+          {"ukr": "Рука", "eng": "Hand", "slug_word": "hand"},
+          {"ukr": "Нога", "eng": "Leg", "slug_word": "leg"},
+          {"ukr": "Око", "eng": "Eye", "slug_word": "eye"},
+          {"ukr": "Вухо", "eng": "Ear", "slug_word": "ear"},
+          {"ukr": "Ніс", "eng": "Nose", "slug_word": "nose"},
+          {"ukr": "Рот", "eng": "Mouth", "slug_word": "mouth"},
+          {"ukr": "Шия", "eng": "Neck", "slug_word": "neck"},
+          {"ukr": "Плече", "eng": "Shoulder", "slug_word": "shoulder"},
+          {"ukr": "Груди", "eng": "Chest", "slug_word": "chest"},
+          {"ukr": "Спина", "eng": "Back", "slug_word": "back"},
+          {"ukr": "Живіт", "eng": "Stomach", "slug_word": "stomach"},
+          {"ukr": "Кисть", "eng": "Wrist", "slug_word": "wrist"},
+          {"ukr": "Пальці", "eng": "Fingers", "slug_word": "fingers"},
+          {"ukr": "Коліно", "eng": "Knee", "slug_word": "knee"}
+        ]
+      },
+      {
+        "name": "Healthy Eating",
+        "slug_topic": "healthy-eating",
+        "words": [
+          {"ukr": "Салат", "eng": "Salad", "slug_word": "salad"},
+          {"ukr": "Овочі", "eng": "Vegetables", "slug_word": "vegetables"},
+          {"ukr": "Фрукти", "eng": "Fruits", "slug_word": "fruits"},
+          {"ukr": "Риба", "eng": "Fish", "slug_word": "fish"},
+          {"ukr": "Горіхи", "eng": "Nuts", "slug_word": "nuts"},
+          {"ukr": "Насіння", "eng": "Seeds", "slug_word": "seeds"},
+          {"ukr": "Йогурт", "eng": "Yogurt", "slug_word": "yogurt"},
+          {"ukr": "Вода", "eng": "Water", "slug_word": "water"},
+          {"ukr": "Зелень", "eng": "Greens", "slug_word": "greens"},
+          {"ukr": "Олія оливкова", "eng": "Olive oil", "slug_word": "olive-oil"},
+          {"ukr": "Білки", "eng": "Proteins", "slug_word": "proteins"},
+          {"ukr": "Крупи", "eng": "Grains", "slug_word": "grains"},
+          {"ukr": "Мед", "eng": "Honey", "slug_word": "honey"}
+        ]
+      },
+      {
+        "name": "Mental Health",
+        "slug_topic": "mental-health",
+        "words": [
+          {"ukr": "Стрес", "eng": "Stress", "slug_word": "stress"},
+          {"ukr": "Тривога", "eng": "Anxiety", "slug_word": "anxiety"},
+          {"ukr": "Депресія", "eng": "Depression", "slug_word": "depression"},
+          {"ukr": "Медитація", "eng": "Meditation", "slug_word": "meditation"},
+          {"ukr": "Сон", "eng": "Sleep", "slug_word": "sleep"},
+          {"ukr": "Відпочинок", "eng": "Rest", "slug_word": "rest"},
+          {"ukr": "Психотерапія", "eng": "Psychotherapy", "slug_word": "psychotherapy"},
+          {"ukr": "Емоції", "eng": "Emotions", "slug_word": "emotions"},
+          {"ukr": "Щастя", "eng": "Happiness", "slug_word": "happiness"},
+          {"ukr": "Підтримка", "eng": "Support", "slug_word": "support"},
+          {"ukr": "Концентрація", "eng": "Concentration", "slug_word": "concentration"},
+          {"ukr": "Баланс", "eng": "Balance", "slug_word": "balance"},
+          {"ukr": "Мотивація", "eng": "Motivation", "slug_word": "motivation"},
+          {"ukr": "Релаксація", "eng": "Relaxation", "slug_word": "relaxation"},
+          {"ukr": "Самопізнання", "eng": "Self-awareness", "slug_word": "self-awareness"}
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Entertainment & Hobbies",
+    "slug_category": "entertainment-hobbies",
+    "topics": [
+      {
+        "name": "Movies & TV Shows",
+        "slug_topic": "movies-tv-shows",
+        "words": [
+          {"ukr": "Фільм", "eng": "Movie", "slug_word": "movie"},
+          {"ukr": "Серіал", "eng": "Tv show", "slug_word": "tv-show"},
+          {"ukr": "Актор", "eng": "Actor", "slug_word": "actor"},
+          {"ukr": "Режисер", "eng": "Director", "slug_word": "director"},
+          {"ukr": "Сцена", "eng": "Scene", "slug_word": "scene"},
+          {"ukr": "Сюжет", "eng": "Plot", "slug_word": "plot"},
+          {"ukr": "Жанр", "eng": "Genre", "slug_word": "genre"},
+          {"ukr": "Прем’єра", "eng": "Premiere", "slug_word": "premiere"},
+          {"ukr": "Касові збори", "eng": "Box office", "slug_word": "box-office"},
+          {"ukr": "Критик", "eng": "Critic", "slug_word": "critic"},
+          {"ukr": "Роль", "eng": "Role", "slug_word": "role"},
+          {"ukr": "Саундтрек", "eng": "Soundtrack", "slug_word": "soundtrack"},
+          {"ukr": "Кадр", "eng": "Shot", "slug_word": "shot"},
+          {"ukr": "Епізод", "eng": "Episode", "slug_word": "episode"},
+          {"ukr": "Сцена", "eng": "Scene", "slug_word": "scene"}
+        ]
+      },
+      {
+        "name": "Music & Concerts",
+        "slug_topic": "music-concerts",
+        "words": [
+          {"ukr": "Музика", "eng": "Music", "slug_word": "music"},
+          {"ukr": "Концерт", "eng": "Concert", "slug_word": "concert"},
+          {"ukr": "Гітара", "eng": "Guitar", "slug_word": "guitar"},
+          {"ukr": "Пісня", "eng": "Song", "slug_word": "song"},
+          {"ukr": "Вокал", "eng": "Vocals", "slug_word": "vocals"},
+          {"ukr": "Барабани", "eng": "Drums", "slug_word": "drums"},
+          {"ukr": "Піаніно", "eng": "Piano", "slug_word": "piano"},
+          {"ukr": "Альбом", "eng": "Album", "slug_word": "album"},
+          {"ukr": "Репетиція", "eng": "Rehearsal", "slug_word": "rehearsal"},
+          {"ukr": "Фестиваль", "eng": "Festival", "slug_word": "festival"},
+          {"ukr": "Композиція", "eng": "Composition", "slug_word": "composition"},
+          {"ukr": "Публіка", "eng": "Audience", "slug_word": "audience"},
+          {"ukr": "Мелодія", "eng": "Melody", "slug_word": "melody"},
+          {"ukr": "Ритм", "eng": "Rhythm", "slug_word": "rhythm"},
+          {"ukr": "Виконавець", "eng": "Performer", "slug_word": "performer"}
+        ]
+      },
+      {
+        "name": "Books & Literature",
+        "slug_topic": "books-literature",
+        "words": [
+          {"ukr": "Книга", "eng": "Book", "slug_word": "book"},
+          {"ukr": "Роман", "eng": "Novel", "slug_word": "novel"},
+          {"ukr": "Автор", "eng": "Author", "slug_word": "author"},
+          {"ukr": "Поезія", "eng": "Poetry", "slug_word": "poetry"},
+          {"ukr": "Оповідання", "eng": "Short story", "slug_word": "short-story"},
+          {"ukr": "Персонаж", "eng": "Character", "slug_word": "character"},
+          {"ukr": "Сюжет", "eng": "Plot", "slug_word": "plot"},
+          {"ukr": "Жанр", "eng": "Genre", "slug_word": "genre"},
+          {"ukr": "Бібліотека", "eng": "Library", "slug_word": "library"},
+          {"ukr": "Читання", "eng": "Reading", "slug_word": "reading"},
+          {"ukr": "Сцена", "eng": "Scene", "slug_word": "scene"},
+          {"ukr": "Критик", "eng": "Critic", "slug_word": "critic"},
+          {"ukr": "Натхнення", "eng": "Inspiration", "slug_word": "inspiration"},
+          {"ukr": "Класика", "eng": "Classic", "slug_word": "classic"},
+          {"ukr": "Видання", "eng": "Edition", "slug_word": "edition"}
+        ]
+      },
+      {
+        "name": "Games & Gaming",
+        "slug_topic": "games-gaming",
+        "words": [
+          {"ukr": "Гра", "eng": "Game", "slug_word": "game"},
+          {"ukr": "Геймер", "eng": "Gamer", "slug_word": "gamer"},
+          {"ukr": "Контролер", "eng": "Controller", "slug_word": "controller"},
+          {"ukr": "Рівень", "eng": "Level", "slug_word": "level"},
+          {"ukr": "Місія", "eng": "Mission", "slug_word": "mission"},
+          {"ukr": "Команда", "eng": "Team", "slug_word": "team"},
+          {"ukr": "Турнір", "eng": "Tournament", "slug_word": "tournament"},
+          {"ukr": "Стратегія", "eng": "Strategy", "slug_word": "strategy"},
+          {"ukr": "Карта", "eng": "Map", "slug_word": "map"},
+          {"ukr": "Квести", "eng": "Quests", "slug_word": "quests"},
+          {"ukr": "Бос", "eng": "Boss", "slug_word": "boss"},
+          {"ukr": "Очки", "eng": "Points", "slug_word": "points"},
+          {"ukr": "Арена", "eng": "Arena", "slug_word": "arena"},
+          {"ukr": "Мультиплеєр", "eng": "Multiplayer", "slug_word": "multiplayer"},
+          {"ukr": "Оновлення", "eng": "Update", "slug_word": "update"}
+        ]
+      },
+      {
+        "name": "Sports & Fitness",
+        "slug_topic": "sports-fitness",
+        "words": [
+          {"ukr": "Спорт", "eng": "Sport", "slug_word": "sport"},
+          {"ukr": "Тренування", "eng": "Training", "slug_word": "training"},
+          {"ukr": "Гімнастика", "eng": "Gymnastics", "slug_word": "gymnastics"},
+          {"ukr": "Біг", "eng": "Running", "slug_word": "running"},
+          {"ukr": "Фітнес", "eng": "Fitness", "slug_word": "fitness"},
+          {"ukr": "Команда", "eng": "Team", "slug_word": "team"},
+          {"ukr": "Гра", "eng": "Game", "slug_word": "game"},
+          {"ukr": "М’яч", "eng": "Ball", "slug_word": "ball"},
+          {"ukr": "Тренер", "eng": "Coach", "slug_word": "coach"},
+          {"ukr": "Змагання", "eng": "Competition", "slug_word": "competition"},
+          {"ukr": "Рекорд", "eng": "Record", "slug_word": "record"},
+          {"ukr": "Витривалість", "eng": "Endurance", "slug_word": "endurance"},
+          {"ukr": "Сила", "eng": "Strength", "slug_word": "strength"},
+          {"ukr": "Гравець", "eng": "Player", "slug_word": "player"},
+          {"ukr": "Перемога", "eng": "Victory", "slug_word": "victory"}
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Business & Finance",
+    "slug_category": "business-finance",
+    "topics": [
+      {
+        "name": "Banking & Money",
+        "slug_topic": "banking-money",
+        "words": [
+          {"ukr": "Банк", "eng": "Bank", "slug_word": "bank"},
+          {"ukr": "Рахунок", "eng": "Account", "slug_word": "account"},
+          {"ukr": "Кредит", "eng": "Credit", "slug_word": "credit"},
+          {"ukr": "Дебет", "eng": "Debit", "slug_word": "debit"},
+          {"ukr": "Карта", "eng": "Card", "slug_word": "card"},
+          {"ukr": "Гроші", "eng": "Money", "slug_word": "money"},
+          {"ukr": "Депозит", "eng": "Deposit", "slug_word": "deposit"},
+          {"ukr": "Транзакція", "eng": "Transaction", "slug_word": "transaction"},
+          {"ukr": "Відсотки", "eng": "Interest", "slug_word": "interest"},
+          {"ukr": "Платіж", "eng": "Payment", "slug_word": "payment"},
+          {"ukr": "Баланс", "eng": "Balance", "slug_word": "balance"},
+          {"ukr": "Позика", "eng": "Loan", "slug_word": "loan"},
+          {"ukr": "Інвестиції", "eng": "Investment", "slug_word": "investment"},
+          {"ukr": "Витрати", "eng": "Expenses", "slug_word": "expenses"},
+          {"ukr": "Бюджет", "eng": "Budget", "slug_word": "budget"}
+        ]
+      },
+      {
+        "name": "Marketing & Sales",
+        "slug_topic": "marketing-sales",
+        "words": [
+          {"ukr": "Реклама", "eng": "Advertising", "slug_word": "advertising"},
+          {"ukr": "Бренд", "eng": "Brand", "slug_word": "brand"},
+          {"ukr": "Кампанія", "eng": "Campaign", "slug_word": "campaign"},
+          {"ukr": "Продаж", "eng": "Sale", "slug_word": "sale"},
+          {"ukr": "Клієнт", "eng": "Client", "slug_word": "client"},
+          {"ukr": "Цільова аудиторія", "eng": "Target audience", "slug_word": "target-audience"},
+          {"ukr": "Стратегія", "eng": "Strategy", "slug_word": "strategy"},
+          {"ukr": "Просування", "eng": "Promotion", "slug_word": "promotion"},
+          {"ukr": "Продукт", "eng": "Product", "slug_word": "product"},
+          {"ukr": "Ринок", "eng": "Market", "slug_word": "market"},
+          {"ukr": "Угода", "eng": "Deal", "slug_word": "deal"},
+          {"ukr": "Презентація", "eng": "Presentation", "slug_word": "presentation"},
+          {"ukr": "Переговори", "eng": "Negotiation", "slug_word": "negotiation"},
+          {"ukr": "Аналіз", "eng": "Analysis", "slug_word": "analysis"}
+        ]
+      },
+      {
+        "name": "Meetings & Negotiations",
+        "slug_topic": "meetings-negotiations",
+        "words": [
+          {"ukr": "Зустріч", "eng": "Meeting", "slug_word": "meeting"},
+          {"ukr": "Переговори", "eng": "Negotiation", "slug_word": "negotiation"},
+          {"ukr": "Угода", "eng": "Agreement", "slug_word": "agreement"},
+          {"ukr": "Обговорення", "eng": "Discussion", "slug_word": "discussion"},
+          {"ukr": "Пропозиція", "eng": "Proposal", "slug_word": "proposal"},
+          {"ukr": "Контракт", "eng": "Contract", "slug_word": "contract"},
+          {"ukr": "Презентація", "eng": "Presentation", "slug_word": "presentation"},
+          {"ukr": "Аргумент", "eng": "Argument", "slug_word": "argument"},
+          {"ukr": "Компроміс", "eng": "Compromise", "slug_word": "compromise"},
+          {"ukr": "Результат", "eng": "Outcome", "slug_word": "outcome"},
+          {"ukr": "Планування", "eng": "Planning", "slug_word": "planning"},
+          {"ukr": "Аналіз", "eng": "Analysis", "slug_word": "analysis"},
+          {"ukr": "Тайм-менеджмент", "eng": "Time management", "slug_word": "time-management"},
+          {"ukr": "Рішення", "eng": "Decision", "slug_word": "decision"}
+        ]
+      },
+      {
+        "name": "Startups & Entrepreneurship",
+        "slug_topic": "startups-entrepreneurship",
+        "words": [
+          {"ukr": "Стартап", "eng": "Startup", "slug_word": "startup"},
+          {"ukr": "Інновація", "eng": "Innovation", "slug_word": "innovation"},
+          {"ukr": "Бізнес-план", "eng": "Business plan", "slug_word": "business-plan"},
+          {"ukr": "Інвестор", "eng": "Investor", "slug_word": "investor"},
+          {"ukr": "Ризик", "eng": "Risk", "slug_word": "risk"},
+          {"ukr": "Команда", "eng": "Team", "slug_word": "team"},
+          {"ukr": "Ідея", "eng": "Idea", "slug_word": "idea"},
+          {"ukr": "Продукт", "eng": "Product", "slug_word": "product"},
+          {"ukr": "Маркетинг", "eng": "Marketing", "slug_word": "marketing"},
+          {"ukr": "Фінансування", "eng": "Funding", "slug_word": "funding"},
+          {"ukr": "Стратегія", "eng": "Strategy", "slug_word": "strategy"},
+          {"ukr": "Масштабування", "eng": "Scaling", "slug_word": "scaling"},
+          {"ukr": "Продаж", "eng": "Sales", "slug_word": "sales"},
+          {"ukr": "Партнерство", "eng": "Partnership", "slug_word": "partnership"},
+          {"ukr": "Розвиток", "eng": "Growth", "slug_word": "growth"}
+        ]
+      },
+      {
+        "name": "Investments & Stocks",
+        "slug_topic": "investments-stocks",
+        "words": [
+          {"ukr": "Акції", "eng": "Stocks", "slug_word": "stocks"},
+          {"ukr": "Облігації", "eng": "Bonds", "slug_word": "bonds"},
+          {"ukr": "Інвестиції", "eng": "Investment", "slug_word": "investment"},
+          {"ukr": "Портфель", "eng": "Portfolio", "slug_word": "portfolio"},
+          {"ukr": "Ринок", "eng": "Market", "slug_word": "market"},
+          {"ukr": "Прибуток", "eng": "Profit", "slug_word": "profit"},
+          {"ukr": "Ризик", "eng": "Risk", "slug_word": "risk"},
+          {"ukr": "Дивіденди", "eng": "Dividends", "slug_word": "dividends"},
+          {"ukr": "Торгівля", "eng": "Trading", "slug_word": "trading"},
+          {"ukr": "Брокер", "eng": "Broker", "slug_word": "broker"},
+          {"ukr": "Аналіз", "eng": "Analysis", "slug_word": "analysis"},
+          {"ukr": "Капітал", "eng": "Capital", "slug_word": "capital"},
+          {"ukr": "Стратегія", "eng": "Strategy", "slug_word": "strategy"},
+          {"ukr": "Фінанси", "eng": "Finance", "slug_word": "finance"},
+          {"ukr": "Ціна", "eng": "Price", "slug_word": "price"}
+        ]
+      }
+    ]
+  }
+]
