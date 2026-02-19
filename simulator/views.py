@@ -1,5 +1,8 @@
 from django.db.models import Q, Count, Max
 from django.shortcuts import get_object_or_404, render
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+from .management.commands.import_data import Command
 
 from game.models import GameSession
 from simulator.models import Category, Topic, Word
@@ -58,3 +61,9 @@ def topic(request, topic_slug):
         "percent": best_attempt,
     }
     return render(request, "simulator/topic.html", context=context)
+
+
+@csrf_exempt
+def import_data_view(request):
+    Command().handle("data/data.json")
+    return HttpResponse("Data imported successfully!")
