@@ -44,13 +44,14 @@ class Command(BaseCommand):
                 )
 
                 for word_data in topic_data["words"]:
-                    Word.objects.update_or_create(
+                    slug = word_data["slug_word"]
+                    while Word.objects.filter(slug=slug).exists():
+                        slug += "_1"
+                    Word.objects.create(
+                        slug=slug,
                         topic=topic,
-                        slug=word_data["slug_word"],
-                        defaults={
-                            "word_ukr": word_data["ukr"],
-                            "word_eng": word_data["eng"],
-                        }
+                        word_ukr=word_data["ukr"],
+                        word_eng=word_data["eng"],
                     )
 
         self.stdout.write(
