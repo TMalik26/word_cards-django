@@ -34,7 +34,10 @@ def user_logout(request):
     return redirect('main:index')
 
 
+@login_required(login_url='users:login')
 def profile(request):
+    if not request.user.is_authenticated:
+        return redirect('users:login')
     user = request.user
     user_topics = (
         Topic.objects
