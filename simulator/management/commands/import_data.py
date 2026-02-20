@@ -16,7 +16,7 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        json_file = options["json_file"]
+        json_file = "simulator/fixtures/data.json"
 
         base_dir = Path(settings.BASE_DIR)
         file_path = base_dir / json_file
