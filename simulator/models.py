@@ -34,7 +34,7 @@ class Word(models.Model):
     word_ukr = models.CharField(max_length=200, verbose_name='Українською')
     word_eng = models.CharField(max_length=200, verbose_name='Англійською')
     topic= models.ForeignKey(to=Topic, on_delete=models.CASCADE, related_name='words')
-    slug = models.SlugField(max_length=200, blank=True, null=True, verbose_name='URL')
+    slug = models.SlugField(max_length=200)
 
     class Meta:
         db_table = 'word'
