@@ -67,3 +67,12 @@ def topic(request, topic_slug):
 def import_data_view(request):
     Command().handle("data/data.json")
     return HttpResponse("Data imported successfully!")
+
+
+def test_data_view(request):
+    categories = Category.objects.all()
+    topics = Topic.objects.all()
+    words = Word.objects.all()
+    return HttpResponse(
+        f"Categories: {categories.count()}, Topics: {topics.count()}, Words: {words.count()}"
+    )
