@@ -1,0 +1,26 @@
+[
+    {
+        "model": "simulator.category",
+        "pk": 1,
+        "fields": {
+            "name": "Бізнес",
+            "slug": "biznes"
+        }
+    },
+    {
+        "model": "simulator.category",
+        "pk": 3,
+        "fields": {
+            "name": "Навчання",
+            "slug": "navchannya"
+        }
+    },
+    {
+        "model": "simulator.category",
+        "pk": 4,
+        "fields": {
+            "name": "Побут",
+            "slug": "pobut"
+        }
+    }
+]
