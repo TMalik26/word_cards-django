@@ -37,12 +37,6 @@ This project is a continuation of my previous project [WordCards](https://github
 ![Result 2](images/result2.png)
 ![Work on the mistakes](images/work_on_the_mistakes.png)
 
-### Categories & Filtering
-![Categories](images/categories.png)
-
-### Statistics & Results
-![Statistics](images/statistics.png)
-
 
 ## How to Use
 1. Register or sign in with Google OAuth
