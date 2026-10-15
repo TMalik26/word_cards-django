@@ -36,6 +36,7 @@ This project is a continuation of my previous project [WordCards](https://github
 ![Result 1](images/result1.png)
 ![Result 2](images/result2.png)
 ![Work on the mistakes](images/work_on_the_mistakes.png)
+![User learning history](images/learning_history.png)
 
 
 ## How to Use
